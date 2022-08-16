@@ -1,0 +1,20 @@
+{
+  "name": "elm-popper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "popper-container.min.js",
+  "scripts": {
+    "test": "npm run build",
+    "build": "elm make --docs=docs.json && esbuild src/popper-container.js --bundle --format=iife --minify --outfile=popper-container.min.js && npm run build:examples",
+    "build:examples": "cp popper-container.min.js examples/lib/popper-container.min.js && elm make examples/src/Main.elm --output=examples/lib/examples.min.js && esbuild examples/lib/examples.min.js --minify --allow-overwrite --outfile=examples/lib/examples.min.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@popperjs/core": "^2.11.6"
+  },
+  "devDependencies": {
+    "esbuild": "^0.15.3"
+  }
+}
