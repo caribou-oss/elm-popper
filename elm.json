@@ -1,6 +1,6 @@
 {
     "type": "package",
-    "name": "caribou-os/popper",
+    "name": "caribou-oss/elm-popper",
     "summary": "Tooltips in Elm via bindings to @popperjs/core",
     "license": "MIT",
     "version": "1.0.0",
